@@ -10,6 +10,7 @@ import Spinner from '../components/Spinner';
 import { toast } from "react-toastify";
 
 function CreateListing() {
+    // eslint-disable-next-line
     const [geolocationEnabled, setGeolocationEnabled] = useState(false);
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
@@ -112,6 +113,8 @@ function CreateListing() {
                                 break;
                             case 'running':
                                 console.log('Upload is running');
+                                break;
+                            default:
                                 break;
                         }
                     },
@@ -409,7 +412,7 @@ function CreateListing() {
                     )}
 
                     {/* IMAGES */}
-                    <label className="formLabel">Iamges</label>
+                    <label className="formLabel">Images</label>
                     <p className="imagesInfo">The first image will be the cover (max 6).</p>
                     <input
                         type="file"
